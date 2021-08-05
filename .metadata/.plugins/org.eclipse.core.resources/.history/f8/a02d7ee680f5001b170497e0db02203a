@@ -1,0 +1,27 @@
+package Ejercicio1;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Ventana extends JFrame{
+	private JPanel panel;
+	public Ventana() {
+		this.setSize(500,500);
+		setLocationRelativeTo(null);
+		setTitle("Ejercicio 1");
+		setResizable(false);
+		iniciarComponentes();
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	
+	private void iniciarComponentes() {
+		panel();
+	}
+	
+	private void panel() {
+		panel = new JPanel();
+		panel.setLayout(null);
+		this.add(panel);
+	}
+
+}

@@ -1,0 +1,44 @@
+package Exercise1;
+
+import java.util.Scanner;
+
+public class Exercise1 {
+	
+	public static void main(String[] args) {
+		 
+		int ini=1900;
+		int fin = 2001;
+		int domingos = 0;
+		long diasTotales=1;
+ 
+		int[] meses = {31,28,31,30,31,30,31,31,30,31,30,31};
+ 
+		for(int ano=ini;ano<fin;ano++){
+ 
+			for(int mes=0;mes<meses.length;mes++){
+ 
+				if(ano>1900){	
+					if(diasTotales%7==0){
+						domingos++;
+						System.out.println(ano + " " + (mes+1));
+					}
+				}
+ 
+				int dias=0;
+ 
+				if(mes!=1 || ano%4!=0 || (ano%100==0 && ano%400!=0)){
+					dias= meses[mes];
+				}
+				else{
+					dias = 29;
+					System.out.println(ano + " bisiesto");
+				}
+ 
+				diasTotales = diasTotales + dias;
+			}
+ 
+		}
+ 
+		System.out.println(domingos);
+	}
+}

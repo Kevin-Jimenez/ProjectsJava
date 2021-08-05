@@ -1,0 +1,12 @@
+package Interfaces;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame {
+	public Ventana() {
+		setSize(500,500);//tamaño
+		setDefaultCloseOperation(EXIT_ON_CLOSE);// para que al dar click en la x se deje de ejecutar el programa
+		setTitle("Primera Ventana");
+	}
+
+}

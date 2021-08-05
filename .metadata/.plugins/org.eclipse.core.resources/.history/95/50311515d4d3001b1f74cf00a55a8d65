@@ -1,0 +1,18 @@
+package Interfaces;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame {
+	public Ventana() {
+		setSize(500,500);//tamaño
+		setTitle("Primera Ventana");
+		//setLocation(400,150);Para que cuando se ejecute abra lla ventana donde yo quiera
+		//setBounds(400,150,500,500);// Hace el setSize y setLocation juntos
+		setLocationRelativeTo(null);//Aparece la ventana en el centro de la pantalla
+		
+		
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);// para que al dar click en la x se deje de ejecutar el programa
+	}
+
+}

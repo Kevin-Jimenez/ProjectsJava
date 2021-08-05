@@ -1,0 +1,12 @@
+package CondicionaleATS;
+
+import javax.swing.JOptionPane;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		int number, dato = 5;
+		
+		number = Integer.parseInt(JOptionPane.showInputDialog("Digite un numero: "));
+	}
+
+}

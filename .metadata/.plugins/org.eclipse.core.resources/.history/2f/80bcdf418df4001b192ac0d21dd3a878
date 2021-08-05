@@ -1,0 +1,76 @@
+package Exercise1;
+
+import java.util.Scanner;
+
+public class Exercise1 {
+	
+	public static void main(String[] args) {
+		 
+    Scanner entry = new Scanner(System.in);
+    System.out.println("Enter the year from which you want to compare: ");
+    int yearentry = entry.nextInt();
+	int[] months = {31,0,31,30,31,30,31,31,30,31,30,31};
+	int year = 1901;
+	int e = 0;
+	int sunday = 0;
+	int SumaMeses = 0;
+	int SumarDias = 0;
+
+
+
+       
+       
+       for(int i = 1;i <= 7;i++){
+               
+               if(year > 2000){
+                       System.out.println(sunday);
+                       return;
+               }
+               
+               
+               if(i == 1){
+                       
+                       if(year % 4 == 0 && year % 100 != 0){
+                    	   months[1] = 29;
+                               
+                       }
+                       if(year % 4 == 0 && year % 100 == 0){
+                    	   months[1] = 28;
+                       }
+                       if(year % 4 != 0 && year % 400 != 0 ){
+                    	   months[1]= 28;
+                       }
+                       
+               }
+               
+               
+       if(i == 7 && SumarDias < SumaMeses){
+    	   sunday += 1;
+               SumarDias = SumarDias + i;
+               i = 1;
+       }
+       if(i == 1 && SumarDias == 0)
+       {
+               for(int x = 0; x <= months.length-1;x++){
+                       
+                       SumaMeses = months[x] + SumaMeses;
+                       
+               }
+       }
+       if(SumarDias > SumaMeses && SumaMeses < 366){
+    	   sunday += 1;
+       }
+       
+       if(SumarDias > SumaMeses ){
+    	   year +=  1;
+         i = 0;
+         SumarDias = 0;
+         SumaMeses = 0;
+       }
+   
+   
+
+       }       
+}
+}
+

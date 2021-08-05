@@ -1,0 +1,76 @@
+package Exercise1;
+
+import java.util.Scanner;
+
+public class Exercise1 {
+	
+	public static void main(String[] args) {
+		 
+    Scanner entry = new Scanner(System.in);
+    System.out.println("Cual es la base: ");
+    int year = entry.nextInt();
+	int[] Meses = {31,0,31,30,31,30,31,31,30,31,30,31};
+	int año = 1901;
+	int e = 0;
+	int Domingos = 0;
+	int SumaMeses = 0;
+	int SumarDias = 0;
+
+
+
+       
+       
+       for(int i = 1;i <= 7;i++){
+               
+               if(año > 2000){
+                       System.out.println(Domingos);
+                       return;
+               }
+               
+               
+               if(i == 1){
+                       
+                       if(año % 4 == 0 && año % 100 != 0){
+                               Meses[1] = 29;
+                               
+                       }
+                       if(año % 4 == 0 && año % 100 == 0){
+                               Meses[1] = 28;
+                       }
+                       if(año % 4 != 0 && año % 400 != 0 ){
+                               Meses[1]= 28;
+                       }
+                       
+               }
+               
+               
+       if(i == 7 && SumarDias < SumaMeses){
+               Domingos = Domingos + 1;
+               SumarDias = SumarDias + i;
+               i = 1;
+       }
+       if(i == 1 && SumarDias == 0)
+       {
+               for(int x = 0; x <= Meses.length-1;x++){
+                       
+                       SumaMeses = Meses[x] + SumaMeses;
+                       
+               }
+       }
+       if(SumarDias > SumaMeses && SumaMeses < 366){
+               Domingos = Domingos - 1;
+       }
+       
+       if(SumarDias > SumaMeses ){
+         año = año +  1;
+         i = 0;
+         SumarDias = 0;
+         SumaMeses = 0;
+       }
+   
+   
+
+       }       
+}
+}
+

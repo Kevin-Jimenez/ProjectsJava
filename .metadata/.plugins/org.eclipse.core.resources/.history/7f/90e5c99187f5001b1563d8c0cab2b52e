@@ -1,0 +1,13 @@
+package Ejercicio2;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame{
+	public Ventana() {
+		setSize(700,400);
+		setTitle("Ejercicio 2");
+		setLocationRelativeTo(null);
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package ClasesFor;
+
+public class Ejercicio1 {
+	public static void main(String args[]) {
+		
+		int numero = 6;
+		int factor = 1;
+		
+		for(int i = numero; i > 0; i--, numero --) {
+			
+			factor = factor * numero;
+		}
+		System.out.println("El factor es: "+ factor);
+	}
+
+}

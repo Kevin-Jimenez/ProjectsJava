@@ -1,0 +1,27 @@
+/*Construir un programa para un competencia de atletismo, el programa debe gestionar una serie
+ * de ateltas caracterizados por su numero de atleta, nombre y tiempo de duracion, al final el programa
+ * debe mostrar los datos del atleta ganador*/
+
+package Ejercico3;
+
+public class Atleta {
+	private String nombre;
+	private int atleta;
+	private float tiempoduracion;
+	
+	public Atleta(String nombre,int atleta,float tiempoduracion) {
+		this.nombre = nombre;
+		this.atleta = atleta;
+		this.tiempoduracion = tiempoduracion;
+	}
+	
+	public float getTiempoduracion() {
+		return tiempoduracion;
+	}
+	
+	public String viewdata() {
+		return "\nNombre:"+nombre+"\nAtleta: "+atleta+"\nTiempo de duracion: "+tiempoduracion+"";
+	}
+	
+
+}

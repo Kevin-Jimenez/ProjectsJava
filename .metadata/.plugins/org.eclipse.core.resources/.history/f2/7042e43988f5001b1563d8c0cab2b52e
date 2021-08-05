@@ -1,0 +1,35 @@
+package Ejercicio2;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Ventana extends JFrame{
+	private JPanel panel;
+	private JLabel etiqueta;
+	
+	public Ventana() {
+		setSize(700,400);
+		setTitle("Ejercicio 2");
+		setLocationRelativeTo(null);
+		iniciarComponetes();
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	
+	private void iniciarComponetes() {
+		panel();
+		etiqueta();
+	}
+	
+	private void panel() {
+		panel = new JPanel();
+		panel.setLayout(null);
+		this.add(panel);
+	}
+
+	private void etiqueta() {
+		etiqueta = new JLabel("Escoja su deporte favorito");
+		
+		
+	}
+}

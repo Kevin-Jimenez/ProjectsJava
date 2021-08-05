@@ -1,0 +1,26 @@
+package ClasesFor;
+
+public class Ejercicio3 {
+	public static void main(String args[]) {
+		
+		/*int number = 2;
+		int sum = 0;
+		
+		for(int i = 1; i < number; i ++) {
+			if(number % i == 0) {
+				sum = sum + i;
+			}
+		}
+		if(sum == number) {
+			System.out.println(number+ " Es perfecto");
+		}
+		else {
+			System.out.println(number+ " No es perfecto");
+		}*/
+		int l =0;
+		for(int j = 0; j<10;j++) {
+			System.out.println(j);
+		}
+	}
+
+}

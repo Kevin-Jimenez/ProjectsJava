@@ -1,0 +1,32 @@
+package Interfaces;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Ventana extends JFrame {
+	public Ventana() {
+		setSize(500,500);//tamaño
+		setTitle("Primera Ventana");
+		//setLocation(400,150);Para que cuando se ejecute abra lla ventana donde yo quiera
+		//setBounds(400,150,500,500);// Hace el setSize y setLocation juntos
+		setLocationRelativeTo(null);//Aparece la ventana en el centro de la pantalla
+		//setResizable(false);//Estable ci cambia de tamño o no
+		setMinimumSize(new Dimension(200,200));//tamaño minimo
+		//this.getContentPane().setBackground(Color.DARK_GRAY);//color de ventana
+		iniciarComponentes();
+		setDefaultCloseOperation(EXIT_ON_CLOSE);// para que al dar click en la x se deje de ejecutar el programa
+	}
+	//se crea un panel sobre la ventana para poder poner componentes
+	private void iniciarComponentes() {
+		JPanel panel = new JPanel();//creacacion de panel
+		panel.setBackground(Color.darkGray);
+		this.getContentPane().add(panel);//se agrega panel
+		
+		JLabel etiqueta = new JLabel("Hola");
+		
+	}
+
+}

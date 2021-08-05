@@ -1,0 +1,31 @@
+package EJRCICIO1;
+
+import java.util.Scanner;
+
+public class EJERCICIO1 {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int numero;
+		String fiz;
+		String buz;
+		String fizbuz;
+		
+		System.out.print("Digite un numero: ");
+		numero = entrada.nextInt();
+		
+		for(int i=1;i<=numero;i++) {
+			if(numero % 3 == 0 || numero % 5 == 0) {
+				System.out.println("Hola");
+			}else if(numero % 3 == 0) {
+				System.out.println("Hola1");
+			}else if(numero % 5 == 0) {
+				System.out.println("Hola2");
+			}else {
+				System.out.println(numero);
+			}
+		}
+		
+		
+	}
+
+}

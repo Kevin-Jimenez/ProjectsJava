@@ -1,0 +1,44 @@
+package Exercise1;
+
+import java.util.Scanner;
+
+public class Exercise1 {
+	
+	public static void main(String[] args) {
+		 
+		int init=1900;
+		int end = 2001;
+		int sundays = 0;
+		long totalDays=1;
+ 
+		int[] meses = {31,28,31,30,31,30,31,31,30,31,30,31};
+ 
+		for(int year=init;year<end;year++){
+ 
+			for(int mes=0;mes<meses.length;mes++){
+ 
+				if(year>1900){	
+					if(totalDays%7==0){
+						sundays++;
+						System.out.println(year + " " + (mes+1));
+					}
+				}
+ 
+				int dias=0;
+ 
+				if(mes!=1 || year%4!=0 || (year%100==0 && year%400!=0)){
+					dias= meses[mes];
+				}
+				else{
+					dias = 29;
+					System.out.println(year + " Bisiesto");
+				}
+ 
+				totalDays = totalDays + dias;
+			}
+ 
+		}
+ 
+		System.out.println(sundays);
+	}
+}

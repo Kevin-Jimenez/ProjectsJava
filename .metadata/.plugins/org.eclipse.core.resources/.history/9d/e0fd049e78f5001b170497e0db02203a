@@ -1,0 +1,13 @@
+package Ejercicio1;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame{
+	public Ventana() {
+		this.setSize(500,500);
+		setLocationRelativeTo(null);
+		setTitle("Hola Baby");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+}

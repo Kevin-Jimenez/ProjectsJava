@@ -1,0 +1,25 @@
+package ClasesFor;
+
+public class Ejercicio4 {
+	public static void main(String args[]) {
+		
+		int number = 2;
+		int sumai = 0;
+		
+		for(int i = 0; i <= number; i++) {
+			sumai = sumai + i;
+		}
+		System.out.println("Suma de iteraciones: "+ sumai );
+		System.out.println("Raiz cuadrada: "+ Math.sqrt(sumai));
+		System.out.println("Numero aleatorio: "+ Math.random()*sumai);
+		
+		System.out.println("Divisores: ");
+		
+		for(int i = 1; i < sumai; i++) {
+			if(number % i == 0) {
+				System.out.println(i + " ");
+			}
+		}
+	}
+
+}
